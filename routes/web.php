@@ -1,7 +1,7 @@
 <?php
 
+use App\Models\pengeluaran;
 use Illuminate\Support\Facades\Route;
-use App\Models\Vendor;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +15,5 @@ use App\Models\Vendor;
 */
 
 Route::get('/', function () {
-    return Vendor::all();
+    return pengeluaran::all();
 });

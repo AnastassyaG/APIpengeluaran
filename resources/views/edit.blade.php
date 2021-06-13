@@ -14,36 +14,26 @@
            <div class="card w-100 shadow">
                <div class="card-body">
                    <div class="card-title text-center fw-bold">
-                       Perbarui Vendor
+                       Perbarui Pengeluaran
                    </div>
                    <hr>
                    <div class="text-end">
-                    <a class="btn btn-sm btn-danger" href="{{route('vendor.index')}}">Batal</a>
+                    <a class="btn btn-sm btn-danger" href="{{route('pengeluaran.index')}}">Batal</a>
                     </div>
-                   <form action="{{route('vendor.update',$edit->id)}}" method="post">
+                   <form action="{{route('pengeluaran.update',$edit->id)}}" method="post">
                     @csrf
                     @method("PUT")
                        <div class="form-group ">
-                           <label for="nama" class="block">Nama Vendor :</label>
-                           <input type="text" id="vendor" name="vendor" class="form-control" value="{{$edit->vendor}}">
+                           <label for="nama" class="block">Pengeluaran :</label>
+                           <input type="text" id="pengeluaran" name="pengeluaran" class="form-control" value="{{$edit->pengeluaran}}">
                         </div>
                         <div class="form-group">
-                            <label for="tipe" class="block">No. Telepon :</label>
-                            <input type="text" id="tipe" name="telepon" class="form-control" value="{{$edit->telepon}}">
+                            <label for="tipe" class="block">Total :</label>
+                            <input type="text" id="total" name="total" class="form-control" value="{{$edit->total}}">
                         </div>
                         <div class="form-group">
-                            <label for="alamat" class="block">Email :</label>
-                            <input type="text" id="email" name="email" class="form-control" value="{{$edit->email}}">
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat" class="block">Kota :</label>
-                            <input type="text" id="kota" name="kota" class="form-control" value="{{$edit->kota}}">
-                        </div><div class="form-group">
-                            <label for="alamat" class="block">Negara :</label>
-                            <input type="text" id="negara" name="negara" class="form-control" value="{{$edit->negara}}">
-                        </div><div class="form-group">
-                            <label for="alamat" class="block">Alamat :</label>
-                            <input type="text" id="alamat" name="alamat" class="form-control" value="{{$edit->alamat}}">
+                            <label for="alamat" class="block">Keterangan :</label>
+                            <input type="text" id="keterangan" name="keterangan" class="form-control" value="{{$edit->keterangan}}">
                         </div>
                         <div class="text-end py-3">
                             <button type="submit" class="btn btn-sm btn-success">Update</button>

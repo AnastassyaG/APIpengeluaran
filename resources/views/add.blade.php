@@ -14,37 +14,25 @@
            <div class="card w-100 shadow">
                <div class="card-body">
                    <div class="card-title text-center fw-bold">
-                       Tambah Vendor
+                       Tambah Pengeluaran
                    </div>
                    <hr>
                    <div class="text-end">
-                    <a class="btn btn-sm btn-dark" href="{{route('vendor.index')}}">List Vendor</a>
+                    <a class="btn btn-sm btn-dark" href="{{route('pengeluaran.index')}}">Daftar Pengeluaran</a>
                     </div>
-                   <form action="{{route('vendor.post')}}" method="POST">
+                   <form action="{{route('pengeluaran.post')}}" method="POST">
                     @csrf
                        <div class="form-group ">
-                           <label for="nama" class="block">Nama Vendor :</label>
-                           <input type="text" id="nama" name="nama" class="form-control">
+                           <label for="nama" class="block">Pengeluaran :</label>
+                           <input type="text" id="pengeluaran" name="pengeluaran" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="tipe" class="block">No. Telepon :</label>
-                            <input type="text" id="telepon" name="telepon" class="form-control">
+                            <label for="tipe" class="block">Total :</label>
+                            <input type="text" id="total" name="total" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="alamat" class="block">Email :</label>
-                            <input type="text" id="email" name="email" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat" class="block">Kota :</label>
-                            <input type="text" id="kota" name="kota" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat" class="block">Negara :</label>
-                            <input type="text" id="negara" name="negara" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label for="alamat" class="block">Alamat :</label>
-                            <input type="text" id="alamat" name="alamat" class="form-control">
+                            <label for="alamat" class="block">Keterangan :</label>
+                            <input type="text" id="keterangan" name="keterangan" class="form-control">
                         </div>
                         <div class="text-end py-3">
                             <button type="submit" class="btn btn-sm btn-success">Create</button>

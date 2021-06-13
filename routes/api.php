@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\VendorController;
+use App\Http\Controllers\PengeluaranController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 /*
@@ -18,11 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('Vendor', 'VendorController@index')->name('vendor.api');
-Route::get('/index', 'VendorController@indexs')->name('vendor.index');
-Route::post('Vendor', 'VendorController@create')->name('vendor.post');
-Route::put('/Vendor/{id}', 'VendorController@update')->name('vendor.update');
-Route::delete('/Vendor/{id}', 'VendorController@delete')->name('vendor.delete');
+Route::get('pengeluaran', 'PengeluaranController@index')->name('pengeluaran.api');
+Route::get('/index', 'PengeluaranController@indexs')->name('pengeluaran.index');
+Route::post('pengeluaran', 'PengeluaranController@create')->name('pengeluaran.post');
+Route::put('/pengeluaran/{id}', 'PengeluaranController@update')->name('pengeluaran.update');
+Route::delete('/pengeluaran/{id}', 'PengeluaranController@delete')->name('pengeluaran.delete');
 
-Route::get('/create', [VendorController::class,'add'])->name('vendor.create');
-Route::get('/edit/{Vendor:id}',[VendorController::class,'edit'])->name('vendor.edit');
+Route::get('/create', [PengeluaranController::class,'add'])->name('pengeluaran.create');
+Route::get('/edit/{pengeluaran:id}',[PengeluaranController::class,'edit'])->name('pengeluaran.edit');
